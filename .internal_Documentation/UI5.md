@@ -86,5 +86,5 @@ onBeforeExport: function (oEvent) {
                 });
 
                 // Update the exported data with the modified array
-                oSmartTable.setExportData(aItems);
+                oEvent.getParameter("exportSettings").data = aItems;
             },
