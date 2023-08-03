@@ -73,18 +73,7 @@ let appId = this.getOwnerComponent().getManifestEntry("/sap.app/id"),
                  return floatType.formatValue(importoLordo, "string");
              },
 
-#### edit data format excel for SmartTable
+#### edit data format dataType excel for SmartTable
 onBeforeExport: function (oEvent) {
-                var oSmartTable = oEvent.getSource();
-                var oTable = oSmartTable.getTable();
-
-                var oBinding = oTable.getBinding("items");
-                var aItems = oBinding.getCurrentContexts().map(function (oContext) {
-                    var oItemData = oContext.getObject();
-                    oItemData.Importo = Number(oItemData.Importo);
-                    return oItemData;
-                });
-
-                // Update the exported data with the modified array
-                oSmartTable.setExportData(aItems);
+                oEvent.getParameter("exportSettings").workbook.columns[11].type="Number"
             },
