@@ -1,3 +1,0 @@
-# question NUM
-
-    1.
