@@ -1,3 +1,8 @@
+## Naming things
+There is an unverified & untested character limit of 50 characters. If your MTA application for example exceeds 50 characters when appending the destination service and xsuaa authentication service then it might be a good idea to name it something else.
+
+Trust me you don't want to end up debugging service based issues.
+
 ## Destination issues
 If you see 403 while doing a POST or 404 using GET while requesting data, you might have one if not all of the following issues: 
 
