@@ -12,7 +12,7 @@ Here we'll be trying to document, simplify, clarify and even correct the officia
 🛠 If it doesn't, look through the official documentation and find a solution \
 📝 Once you solve it, take some time to reflect and update the document if necessary by following [this](#✍-contributing).
 
-There's no feature or issue your future self or another person might not find challenging. So don't fear to write about it even if you'll just embelish it with one extra note. Even if you want to rewrite in a more intuitive way.
+There's no feature or issue your future self or another person might not find challenging. So don't fear to write about it even if you'll just embellish it with one extra note. Even if you want to rewrite in a more intuitive way.
 
 Writing things down will even make you understand them better yourself.
 
