@@ -123,6 +123,18 @@ Then you can use element - property bindings with a relative path to the entity.
 }" />
 ```
 
+### DatePicker
+```xml
+<DatePicker
+	value="{
+		'path': 'state>/filterDataContabile',
+		'type': 'sap.ui.model.type.Date', // Allows us to use the formatOptions for dates
+		'formatOptions': { 'pattern': 'yyyy-MM-dd' } // Display and return format
+	}">
+	<specialDates /> <!-- Highlights select dates -->
+</DatePicker>
+```
+
 ---
 ## Smart Controls
 All smart controls enhance the data they're displaying using annotations. [Read more here](CAP.md#Annotations)
