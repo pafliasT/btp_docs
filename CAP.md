@@ -1,3 +1,13 @@
+## OData Notes
+CAP exposes by default it's data using the v4 protocol, but there are ways to convert back to v2.
+*We won't look into the benefits of v2 & v4 here.*
+### Converting to v2
+As cap is creating an express server, we can provide a middleware proxy to do the conversion.
+[This is the supported version](https://www.npmjs.com/package/@cap-js-community/odata-v2-adapter#cap-js-communityodata-v2-adapter-cov2ap) and [the deprecated version](https://www.npmjs.com/package/@sap/cds-odata-v2-adapter-proxy).
+
+The supported version is required for sap support to help a project.
+### Differences between v4 and v2
+
 ## Using Smart Controls
 Prerequisites:
 - OData model must be V2 (see [odata v2 adapter](https://github.com/cap-js-community/odata-v2-adapter)).
@@ -36,3 +46,7 @@ annotate Entity with @(UI.LineItem: [
     { Value: Element },
 ]);
 ```
+
+## Functions & Actions
+
+`INSERT INTO` queries don't insert the data after the Promise resolves. The function needs to exit out completely without any issues for the data to begin it's insertion.

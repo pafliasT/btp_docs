@@ -41,13 +41,12 @@ In the manifest you can see the sources of each service defined in `sap.app.data
 [`setProperty()`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/setProperty) Set a specific property of a JSON model.
 ### OData v2
 Service CURD:
-[`create(sPath, oData, mParameters)`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/create)
-*No deep create support*
-`update()`
+[`create(sPath, oData, mParameters)`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/create) *No deep create support*
+`update(sPath, oData, mParameters)` - sPath must define [the element](https://www.odata.org/getting-started/basic-tutorial/#update)
 `read()`
 `remove()`
-[`getProperty()`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/getProperty) Get a specific property of an OData model. *Starts with a / if it's not relative.*
-[`setProperty()`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/setProperty) Set a specific property of an OData model. *If `changeBatchGroup` is not set to  `deferred` it updates automatically the data. Otherwise `submitChanges()` must be used*.
+[`getProperty()`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/getProperty) Get a specific property of a OData model. *Starts with a / if it's not relative.*
+[`setProperty()`](https://ui5.sap.com/#/api/sap.ui.model.json.JSONModel%23methods/setProperty) Set a specific property of a OData model. *If `changeBatchGroup` is not set to  `deferred` it updates automatically the data. Otherwise `submitChanges()` must be used*.
 [`refresh()`](https://ui5.sap.com/#/api/sap.ui.model.odata.v2.ODataModel%23methods/refresh) Updates model's data with server.
 
 ### OData v4
@@ -135,6 +134,11 @@ Then you can use element - property bindings with a relative path to the entity.
 </DatePicker>
 ```
 
+### Get unformatted date from DatePicker
+```js
+oDatePicker.getProperty("dateValue")
+```
+
 ---
 ## Smart Controls
 All smart controls enhance the data they're displaying using annotations. [Read more here](CAP.md#Annotations)
@@ -162,11 +166,18 @@ Display a table enhanced with annotations. Preselect table rows with [this](CAP.
 <smartTable:SmartTable
 	tableType="ResponsiveTable" // Sets the table type
 	entitySet="Orders"          // Selects the entity
-	enableAutoBinding="true">   // Load table data on init
+	initiallyVisibleFields="Field1, Field2, ..." // Preselected fields
+	initialNoDataText=""     // Initial text if no data
+	enableAutoBinding="true" // Load table data on init
+>  
+	<smarttable:noData> // Text when no data was found
+		...
+	</smarttable:noData>
 </smartTable:SmartTable>
 ```
 *Example*
 
+*TODO Check if initiallyVisibleFields overrides or complements LineItem annotation*
 #### Control's parameters
 ##### `tableType`
 | `tableType` | Function |
