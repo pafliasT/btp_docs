@@ -1,3 +1,5 @@
+# CAP
+
 ## OData Notes
 CAP exposes by default it's data using the v4 protocol, but there are ways to convert back to v2.
 *We won't look into the benefits of v2 & v4 here.*
