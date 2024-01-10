@@ -180,4 +180,4 @@ Although all these features sound great. Some issues still need to be considered
 [Typescript documentation about // @ts-check](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html) \
 [Official JSDoc Reference](https://jsdoc.app/) \
 [Typescript JSDoc Documentation](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html) \
-[JSDoc cheat sheet](https://docs.joshuatz.com/cheatsheets/js/jsdoc/) \
+[JSDoc cheat sheet](https://docs.joshuatz.com/cheatsheets/js/jsdoc/)
