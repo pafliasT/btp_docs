@@ -23,7 +23,7 @@ jobs:
       HUGO_VERSION: 0.120.2
     steps:
       - name: Preapare content
-        uses: dalebezolli/quickdoc@v0.2.0
+        uses: dalebezolli/quickdoc@v0.2.2
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
