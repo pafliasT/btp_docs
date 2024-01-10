@@ -176,8 +176,8 @@ Although all these features sound great. Some issues still need to be considered
 - There need to be type declarations for global objects.
 - UI5 needs some restructuring for this technique to be used effectively.
 ## Learn More
-[Global Typesetting within VS Code](https://code.visualstudio.com/docs/nodejs/working-with-javascript)
-[Typescript documentation about // @ts-check](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html)
-[Official JSDoc Reference](https://jsdoc.app/)
-[Typescript JSDoc Documentation](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
-[JSDoc cheat sheet](https://docs.joshuatz.com/cheatsheets/js/jsdoc/)
+[Global Typesetting within VS Code](https://code.visualstudio.com/docs/nodejs/working-with-javascript) \
+[Typescript documentation about // @ts-check](https://www.typescriptlang.org/docs/handbook/intro-to-js-ts.html) \
+[Official JSDoc Reference](https://jsdoc.app/) \
+[Typescript JSDoc Documentation](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html) \
+[JSDoc cheat sheet](https://docs.joshuatz.com/cheatsheets/js/jsdoc/) \
