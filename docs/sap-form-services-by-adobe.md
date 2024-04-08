@@ -1,35 +1,55 @@
-# SAP Form Services by Adobe
+# SAP Form Services by Adobe Guide 📝
 
-## Links
-[Help SAP - SAP Forms Service by Adobe](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe)
+Learn how to set up and use the SAP Form Services by Adobe to create and manage PDF forms easily. This guide includes initial setup, designing PDFs, uploading templates, and utilizing the API for advanced integration.
 
-## Basic Workflow
-### Initial Setup
-If you need more details regarding the process [click here](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/getting-started).
+## Useful Links 🔗
 
-To have access to the service which is split into the Form Service and the Form Service API you need to assign the corresponding **entitlements to the global account**.
-- **Form Service by Adobe**: default(Application) - Dashboard for managing forms
-- **Form Service by Adobe API**: standard - API access
+- **SAP Forms Service by Adobe Documentation:** [Help SAP - SAP Forms Service by Adobe](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/sap-forms-service-by-adobe)
 
-Next navigate to Service Marketplace and:
-- **Form Service by Adobe**: Create an application plan
-- **Form Service by Adobe API**: Create a service plan
+## Basic Workflow 🔄
 
-Create a service key for the Adobe API service
+### Initial Setup ⚙️
 
-Now to be able to connect to an application you need to create a Destination and allow it to be used inside of it through the `xs-app.json` file [like so](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/integrate-rest-api-via-destination-service).
-### Design a PDF
-Create a PDF using `Adobe LiveCycle` 
-Setup page size by clicking on `Page1` in the Hierarchy and navigating to it's Object details.
-### Upload a Template
-Navigate to `Form Service by Adobe` and change the path to `/adsrestapi/ui.html`.
-Press `Create Form` and specify a name
-Then upload a template and specify the name, xdp file, language and inside the optional data the locale.
-### Use the API
-[read more here](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/integrate-rest-api-via-destination-service)
+For detailed setup instructions, [click here](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/getting-started).
 
-## Design
-### Change the page size & orientation
-With masterpage selected: Object > Masterpage
-### Make tables overflow to next page
-With page subform selected:  Object > Subform > Content: Flowed
+Assign the necessary **entitlements to your global account** to access:
+
+- **Form Service by Adobe**: `default(Application)` - A dashboard for managing forms.
+- **Form Service by Adobe API**: `standard` - API access for programmatic control.
+
+Then, in the Service Marketplace:
+
+- For **Form Service by Adobe**: Create an application plan.
+- For **Form Service by Adobe API**: Create a service plan.
+
+**Create a service key** for the Adobe API service to authenticate your requests.
+
+To connect to an application, create a Destination and configure it in the `xs-app.json` file for use. Detailed instructions can be found [here](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/integrate-rest-api-via-destination-service).
+
+### Design a PDF 🎨
+
+Utilize `Adobe LiveCycle` to create your PDF. Adjust the page size by selecting `Page1` in the hierarchy and modifying its Object details.
+
+### Upload a Template 📤
+
+1. Go to `Form Service by Adobe` and navigate to `/adsrestapi/ui.html`.
+2. Click `Create Form`, specify a name, then upload your template.
+3. Define the template name, xdp file, language, and in the optional data, the locale.
+
+### Use the API 🚀
+
+For integrating the API into your application for dynamic form handling, [read more here](https://help.sap.com/docs/forms-service-by-adobe/sap-forms-service-cf/integrate-rest-api-via-destination-service).
+
+## Design Tips ✨
+
+### Change Page Size & Orientation 🔧
+
+To adjust, with the master page selected, go to: Object > Masterpage.
+
+### Enable Table Overflow to Next Page 📊
+
+For tables that extend beyond one page, with the page subform selected, navigate to: Object > Subform > Content: Flowed.
+
+## Conclusion
+
+By following these steps and utilizing the design tips, you can effectively create and manage PDF forms using SAP Form Services by Adobe, enhancing your document workflows and user interactions. Happy designing! 🎉

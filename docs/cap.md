@@ -1,33 +1,47 @@
-# CAP
+# CAP - Cloud Application Programming Model 🚀
 
-## OData Notes
-CAP exposes by default it's data using the v4 protocol, but there are ways to convert back to v2.
-*We won't look into the benefits of v2 & v4 here.*
-### Converting to v2
-As cap is creating an express server, we can provide a middleware proxy to do the conversion.
-[This is the supported version](https://www.npmjs.com/package/@cap-js-community/odata-v2-adapter#cap-js-communityodata-v2-adapter-cov2ap) and [the deprecated version](https://www.npmjs.com/package/@sap/cds-odata-v2-adapter-proxy).
+This document outlines essential notes on OData, utilizing smart controls, annotations within CAP, and nuances with functions & actions.
 
-The supported version is required for sap support to help a project.
-### Differences between v4 and v2
+## OData Notes 📝
 
-## Using Smart Controls
-Prerequisites:
-- OData model must be V2 (see [odata v2 adapter](https://github.com/cap-js-community/odata-v2-adapter)).
-- Entities must be bound to the control programmatically.
-## Annotations
-To find information about any annotation look [here](https://cap.cloud.sap/docs/advanced/odata#vocabularies)
-### ValueList annotation (Input Helper):
+CAP defaults to exposing its data using the OData v4 protocol. However, it supports conversion to v2 with middleware proxy.
+
+### Converting to v2 ↩️
+
+- CAP leverages an Express server, enabling middleware proxy for protocol conversion.
+- **Supported Version**: [`@cap-js-community/odata-v2-adapter`](https://www.npmjs.com/package/@cap-js-community/odata-v2-adapter#cap-js-communityodata-v2-adapter-cov2ap) is recommended for SAP support.
+- **Deprecated Version**: [`@sap/cds-odata-v2-adapter-proxy`](https://www.npmjs.com/package/@sap/cds-odata-v2-adapter-proxy).
+
+### Differences Between v4 and v2 🔄
+
+*Details on the protocol differences are not covered here.*
+
+## Using Smart Controls 💡
+
+To leverage Smart Controls effectively:
+
+### Prerequisites
+
+- The OData model must be v2, facilitated by [odata v2 adapter](https://github.com/cap-js-community/odata-v2-adapter).
+- Entities should be bound to the control programmatically.
+
+## Annotations 📊
+
+Annotations enhance OData services with metadata for UI, filtering, and more. For comprehensive details on annotations, visit [CAP's OData documentation](https://cap.cloud.sap/docs/advanced/odata#vocabularies).
+
+### ValueList Annotation (Input Helper) 📋
+
 ```js
 @Common.ValueList: {
-	Label: 'Label',              // <-- No clue yet
-	CollectionPath: 'ODataPath', // <-- Selection Data from this OData Entity
-	Parameters: [                // <-- Columns will be displayed in Helper
-		{
-			$Type: 'Common.ValueList____', // <-- Interraction with data
-			ValueListProperty: 'Element',  // <-- Element from OData's CollectionPath
-			?LocalDataProperty: Element    // <-- Local anotation's data filtered
-		}
-	]
+    Label: 'Label',              // Description or label of the input helper
+    CollectionPath: 'ODataPath', // Data selection from this OData Entity
+    Parameters: [                // Columns to be displayed in the input helper
+        {
+            $Type: 'Common.ValueList____', // Interaction type with data
+            ValueListProperty: 'Element',  // Element from OData's CollectionPath
+            ?LocalDataProperty: 'Element'  // Local annotation's data filtered
+        }
+    ]
 }
 ```
 If you have only one parameter it can't be of $Type: `Common.ValueListParameterDisplayOnly`
